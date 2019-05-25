@@ -17,6 +17,7 @@ This will build an app on your acc.
 - Since I am using env variables you need to go into your heroku app -> settings -> Config Vars
 - In there click on reveal config vars
 - Add new key `DB` (all caps) with value of your mongodb URI
+
 For [example](https://docs.atlas.mongodb.com/driver-connection/#connect-your-application)
 Key: DB
 Value: mongodb+srv://<user>:<password>@cluster0.mongodb.net/<nameofdatabase>?ssl=true&authSource=admin
