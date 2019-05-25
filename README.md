@@ -21,6 +21,9 @@ This will build an app on your acc.
 For [example](https://docs.atlas.mongodb.com/driver-connection/#connect-your-application)
 Key: DB
 Value: mongodb+srv://<user>:<password>@cluster0.mongodb.net/<nameofdatabase>?ssl=true&authSource=admin
+  
 While in your heroku app dashboard click on `Open app`. 
+
 Done!
+
 Now you are good to go.
