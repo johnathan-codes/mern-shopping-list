@@ -10,8 +10,12 @@ const app = express();
 //Bodyparser middleware
 app.use(bodyParser.json());
 
-// DB Config
-const db = require('./config/keys').mongoURI;
+// DB Config - localhost
+//const db = require('./config/keys').mongoURI;
+
+// DB Config - for heroku on Mongo Atlas
+//this value is defined on heroku platform in app envs
+const db = process.env.DB;
 
 //Connect to Mongo
 mongoose.connect(db, { useNewUrlParser: true })
