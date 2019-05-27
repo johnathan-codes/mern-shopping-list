@@ -6,7 +6,10 @@ Master branch is ready to be deployed to heroku app.
 
 ## How to deploy - Step-by-step
 If you came accross some error create an issue :)
-In terminal
+
+Firstly you need a Mongo database. I would suggest creating a cluster at [mongodb.com](https://cloud.mongodb.com/user#/atlas/login) since I am also using this service. After creating account and/or cluster click on `connect` then click on `Connect Your Application` and select `Node.js` as driver (version 3.0 or later). Then copy the `Connection String Only`. This will be your value for DB key on Heroku app -explained below
+
+In terminal type these commands (in order shown below)
 - `git clone` this repo
 - `cd` into the cloned repo
 - `heroku login` -  login to your heroku account
@@ -24,6 +27,4 @@ Value: mongodb+srv://<user>:<password>@cluster0.mongodb.net/<nameofdatabase>?ssl
   
 While in your heroku app dashboard click on `Open app`. 
 
-Done!
-
-Now you are good to go.
+Done! Now go! Prepare your shopping list for your next trip to the mall :blush:
