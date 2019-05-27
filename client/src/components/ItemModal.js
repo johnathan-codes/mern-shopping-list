@@ -25,10 +25,8 @@ class ItemModal extends Component {
             name: this.state.name
         }
 
-        //Add item via addItem action
         this.props.addItem(newItem);
 
-        //close modal
         this.toggle();
     }
 

@@ -7,26 +7,18 @@ const items = require('./routes/api/items');
 
 const app = express();
 
-//Bodyparser middleware
 app.use(bodyParser.json());
 
-// DB Config - localhost
-//const db = require('./config/keys').mongoURI;
+const db = require('./config/db').mongoURI;
+//const db = process.env.DB;
 
-// DB Config - for heroku on Mongo Atlas
-//this value is defined on heroku platform in app envs
-const db = process.env.DB;
-
-//Connect to Mongo
 mongoose.connect(db, { useNewUrlParser: true })
     .then(() => console.log('Database connection successful.'))
     .catch(err => console.log(err));
 
 app.use('/api/items', items);
 
-// Serve static assets if in production
 if(process.env.NODE_ENV === 'production'){
-    //set static folder
     app.use(express.static('client/build'));
 
     app.get('*', (req, res) => {
