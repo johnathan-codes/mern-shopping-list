@@ -25,17 +25,15 @@ class ItemModal extends Component {
             name: this.state.name
         }
 
-        //Add item via addItem action
         this.props.addItem(newItem);
 
-        //close modal
         this.toggle();
     }
 
     render(){
         return(
             <div>
-                <Button color="dark" style={{marginBottom: "@rem"}} onClick={this.toggle}>Add Item</Button>
+                <Button color="dark" style={{marginBottom: "2rem"}} onClick={this.toggle}>Add Item</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                     <ModalHeader toggle={this.toggle}>Add to shopping list</ModalHeader>
                     <ModalBody>
