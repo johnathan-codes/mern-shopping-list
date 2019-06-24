@@ -66,6 +66,7 @@ class ItemModal extends Component {
                 <Label for='item'>Item</Label>
                 <Input
                   type='text'
+                  autoFocus
                   name='name'
                   id='item'
                   placeholder='Add item to buy'
